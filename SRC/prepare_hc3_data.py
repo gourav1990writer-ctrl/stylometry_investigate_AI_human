@@ -3,16 +3,16 @@ import pandas as pd
 
 print("Loading HC3 dataset from Hugging Face...")
 
-# Load the English subset of HC3
+# Loading the English subset of HC3
 dataset = load_dataset("Hello-SimpleAI/HC3", name="all")
 
 print(dataset)
 
-# We will use the train split if available
+# I will use the train split if available
 # and create a small balanced dataset from it.
 rows = []
 
-# Limit size to keep things simple and fast
+# Limiting size to keep things simple and fast
 max_human = 1000
 max_ai = 1000
 
@@ -21,7 +21,7 @@ ai_count = 0
 
 for item in dataset["train"]:
     # HC3 examples contain human answers and ChatGPT answers
-    # We collect both sides into the same simple table
+    # I collect both sides into the same simple table
 
     # Human answers
     human_answers = item.get("human_answers", [])
@@ -52,10 +52,10 @@ for item in dataset["train"]:
 
 df = pd.DataFrame(rows)
 
-# Shuffle the data
+# Shuffling the dataset
 df = df.sample(frac=1, random_state=42).reset_index(drop=True)
 
-# Save to CSV
+# Saving to CSV
 output_path = "data/processed/hc3_human_ai.csv"
 df.to_csv(output_path, index=False)
 
