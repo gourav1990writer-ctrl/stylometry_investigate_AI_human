@@ -1,0 +1,7 @@
+timestamp,text,prediction,feedback
+2026-03-15T19:40:19.200161,The input file was perfect for predicting the outcome,human,wrong
+2026-03-15T19:40:51.901291,"Important notes:
+
+The cursor won't move as you type (no dots or letters appear) - this is normal for security
+Just type your password blindly and press Enter
+It's asking for the same password you use to log into your Mac",human,correct
