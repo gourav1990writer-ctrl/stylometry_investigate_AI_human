@@ -34,6 +34,9 @@ model = Pipeline([
 # Training the model
 model.fit(X_train, y_train)
 
+vectorizer = model.named_steps["tfidf"]
+print("Number of TF-IDF features:", len(vectorizer.get_feature_names_out()))
+
 # Predicting on test set
 y_pred = model.predict(X_test)
 
