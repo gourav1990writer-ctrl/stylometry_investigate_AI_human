@@ -6,7 +6,7 @@ A small Streamlit app that explores whether text appears human-written or AI-wri
 - TF-IDF vectorization
 - SGD classifier
 - Prediction probabilities
-- Basic language features
+- Basic linguistics features
 - User feedback buttons
 
 ## Run locally
