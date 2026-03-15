@@ -6,7 +6,7 @@ from SRC.save_feedback import save_feedback
 # Load model
 model = joblib.load("models/human_ai_model.joblib")
 
-st.title("Digital Fingerprint App")
+st.title("Stylometry Investigate App")
 st.write("Paste a text below and the app will guess whether it looks human or AI-written.")
 
 user_text = st.text_area("Enter your text here:")
