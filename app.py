@@ -7,7 +7,8 @@ from SRC.save_feedback import save_feedback
 model = joblib.load("models/human_ai_model.joblib")
 
 st.title("Stylometry Investigate App: Can you write like an AI?")
-st.write("Paste a text below and the app will guess whether it looks human or AI-written.")
+st.write("Write a text below and the app will guess whether it looks human or AI-written.")
+st.write("You can also provide feedback on whether the prediction was correct or not, which will help me improve the model over time. 🤗 ")
 
 user_text = st.text_area("Enter your text here:")
 
